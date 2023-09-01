@@ -1,0 +1,21 @@
+//MEDIAS
+@media (max-width: 767px) {
+    
+    .offcanvas.offcanvas-end {
+        background-color: $color-fondo !important;
+        a {
+            &:hover {
+                color: $acento;
+            }
+            
+        }
+    }
+    .offcanvas-title {
+        color: $acento !important;
+    }
+    
+    .navbar-toggler:hover {
+        color: $color-botones !important;
+    }
+
+    }

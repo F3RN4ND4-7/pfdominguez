@@ -1,0 +1,27 @@
+// Header and Navigation
+header {
+  background-color: $primary-color;
+  nav {
+    background-color: transparent;
+    .nav-link {
+      color: white;
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border: transparent;
+  &:hover {
+    background-color: $color-botones-secundarios;
+  }
+}
+
+.border-primary {
+ color: $color-botones-secundarios;
+ border: 3px solid $primary-color !important;
+ margin: 16px;
+}

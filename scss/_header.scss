@@ -1,0 +1,35 @@
+// HEADER
+
+@mixin pfdominguez {
+    text-decoration: none;
+    color: $color-fuentes;
+}
+
+.tituloPrincipal {
+    @include pfdominguez;
+    i{
+        font-size: 2rem;
+        color: $color-fuentes;
+    }
+    h1 {
+        display: inline-block;
+        color: $color-fuentes;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    li {
+
+        a {
+            @include pfdominguez;
+            &:hover{
+                color: $color-botones-secundarios;
+            }
+        }
+    }
+}
