@@ -10,7 +10,6 @@
         
     }
 }
-
 .bg-dark {
     background-color: $color-fondo-secundario !important;
 }
@@ -19,6 +18,10 @@
     color: $acento !important;
 }
 
-.navbar-toggler:hover {
+.navbar-toggler {
+    position: fixed !important;
+    top: 12px !important;
+    &:hover {
     color: $color-botones !important;
+}
 }

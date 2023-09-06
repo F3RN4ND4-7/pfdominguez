@@ -1,32 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,400;10..48,600;10..48,800&family=Open+Sans:wght@400;700&display=swap");
 header {
-  background-color: #a60aa4;
+  background-color: #a70021;
 }
 header nav {
   background-color: transparent;
 }
 header nav .nav-link {
-  color: white;
+  color: #ffffff;
 }
 header nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: #b3ff00;
 }
 
 .btn-primary {
-  background-color: #a60aa4;
+  background-color: #a70021;
   border: transparent;
 }
 .btn-primary:hover {
-  background-color: #770045;
+  background-color: #0d0062;
 }
 
 .border-primary {
-  color: #770045;
-  border: 3px solid #a60aa4 !important;
+  color: #0d0062;
+  border: 3px solid #a70021 !important;
   margin: 16px;
 }
 
+img {
+  filter: saturate(1.2);
+}
+img:hover {
+  filter: saturate(1);
+}
+
+.carousel {
+  height: 100%;
+}
+
+.accordion-button {
+  color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #FF7700;
+  color: #ffffff;
+}
+
+.accordion-button.collapsed {
+  background-color: #0d0062;
+  color: #ffffff;
+}
+
 .tituloPrincipal {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: #ffffff;
 }
@@ -34,11 +60,17 @@ header nav .nav-link:hover {
   font-size: 2rem;
   color: #ffffff;
 }
+.tituloPrincipal i:hover {
+  color: #0d0062;
+}
 .tituloPrincipal h1 {
   display: inline-block;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
+}
+.tituloPrincipal h1:hover {
+  color: #0d0062;
 }
 
 ul {
@@ -46,25 +78,26 @@ ul {
   list-style: none;
 }
 ul li a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: #ffffff;
 }
 ul li a:hover {
-  color: #770045;
+  color: #0d0062;
 }
 
 .hero {
   width: 100%;
   display: inline-block;
   position: relative;
-  background-color: #2b0043;
+  background-color: #0d0062;
 }
 .hero h1 {
   color: #ffffff;
 }
 .hero h2 {
+  color: #ffffff;
   margin-bottom: 10px;
-  font-size: 3rem;
   font-weight: 500;
 }
 .hero h2 span {
@@ -78,52 +111,55 @@ ul li a:hover {
   font-size: 1rem;
 }
 .hero a {
-  background-color: #b20068;
+  background-color: #00fffb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: #ffffff;
   padding: 5px 15px;
   font-weight: 700;
 }
 .hero a:hover {
-  background-color: #770045;
+  background-color: #0d0062;
+}
+
+.aboutHero {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to left top, #004777, #00AFB5);
+}
+.aboutHero h1 {
+  color: #ffffff;
+}
+.aboutHero h2 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.aboutHero h2 span {
+  font-weight: 700;
+  position: relative;
+  padding: 0 5px;
+}
+.aboutHero p {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+.aboutHero a {
+  background-color: #00fffb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 15px;
+  font-weight: 700;
+}
+.aboutHero a:hover {
+  background-color: #0d0062;
 }
 
 .animate__animated.animate__zoomIn {
   --animate-duration: 5s;
-}
-
-.introServicios {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  border: 3px solid #770045;
-}
-.introServicios h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.imagenServicio {
-  border-radius: 10px;
-  padding: 4px;
-  max-width: 100%;
-  height: auto;
-  filter: grayscale(30%);
-}
-.imagenServicio:hover {
-  filter: grayscale(0%);
-  transform: rotate(180deg);
-}
-
-.imagenServicio-portafolio {
-  border-radius: 10px;
-  padding: 4px;
-  max-width: 100%;
-  height: auto;
 }
 
 @media (max-width: 767px) {
@@ -137,29 +173,46 @@ ul li a:hover {
     color: #b3ff00 !important;
   }
   .navbar-toggler:hover {
-    color: #b20068 !important;
+    color: #00fffb !important;
+  }
+  .d-block {
+    display: block;
   }
 }
+.disable-on-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .disable-on-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .display-on-mobile {
+    display: block;
+  }
+}
+
+.display-on-desktop {
+  display: block;
+}
+
 .typo-change {
   animation: TypoChange 5s ease-in infinite;
 }
 
 @keyframes TypoChange {
   0% {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-family: "Open Sans", sans-serif;
-    color: #b3ff00;
+    color: #ffffff;
   }
   50% {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    color: #A3FFDB;
-  }
-  100% {
-    font-family: "Montserrat", sans-serif;
+    color: #b3ff00;
   }
 }
 footer {
-  background-color: rgba(0, 0, 0, 0.4745098039);
+  background-color: #FF7700;
   padding: 2rem;
   bottom: 0;
   left: 0;
@@ -167,7 +220,7 @@ footer {
   text-align: center;
 }
 footer ul {
-  justify-content: space-between;
+  justify-content: space-evenly;
   display: flex;
   list-style: none;
 }
@@ -175,13 +228,8 @@ footer ul li:hover {
   color: #b3ff00;
 }
 
-.carousel-inner {
-  max-height: 500px;
-  background-size: auto;
-}
-
 .offcanvas.offcanvas-end {
-  background-color: rgba(0, 0, 0, 0.4745098039) !important;
+  background-color: #FF7700 !important;
 }
 .offcanvas.offcanvas-end a {
   font-size: 1.5rem;
@@ -191,19 +239,23 @@ footer ul li:hover {
 }
 
 .bg-dark {
-  background-color: rgba(0, 0, 0, 0.4745098039) !important;
+  background-color: #FF7700 !important;
 }
 
 .offcanvas-title {
   color: #b3ff00 !important;
 }
 
+.navbar-toggler {
+  position: fixed !important;
+  top: 12px !important;
+}
 .navbar-toggler:hover {
-  color: #b20068 !important;
+  color: #00fffb !important;
 }
 
 .accordion {
-  --bs-accordion-bg: #969696 !important;
+  --bs-accordion-bg: #0d0062 !important;
   color: white !important;
 }
 
@@ -212,7 +264,7 @@ footer ul li:hover {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #240020 !important;
+  background-color: #FF7700 !important;
   color: white !important;
 }
 

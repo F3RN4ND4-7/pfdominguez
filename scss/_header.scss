@@ -1,6 +1,7 @@
 // HEADER
 
 @mixin pfdominguez {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     color: $color-fuentes;
 }
@@ -10,21 +11,25 @@
     i{
         font-size: 2rem;
         color: $color-fuentes;
+        &:hover{
+            color: $color-botones-secundarios;
+        }
     }
     h1 {
         display: inline-block;
         color: $color-fuentes;
         font-size: 1rem;
         font-weight: 700;
+        &:hover{
+            color: $color-botones-secundarios;
+        }
     }
 }
 
 ul {
     display: flex;
     list-style: none;
-
     li {
-
         a {
             @include pfdominguez;
             &:hover{

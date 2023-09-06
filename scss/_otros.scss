@@ -1,1 +1,13 @@
 
+.photo-container {
+    width: 200px; 
+    height: 200px;
+    background-image: url(/img/techxture.png);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+  }
+  
+  .photo-container:hover {
+    background-image: url(/img/me/coneji.jpg);
+  }

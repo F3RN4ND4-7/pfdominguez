@@ -1,13 +1,11 @@
 //MEDIAS
 @media (max-width: 767px) {
-    
     .offcanvas.offcanvas-end {
         background-color: $color-fondo !important;
         a {
             &:hover {
                 color: $acento;
             }
-            
         }
     }
     .offcanvas-title {
@@ -18,4 +16,27 @@
         color: $color-botones !important;
     }
 
+    .d-block {
+        display: block;
     }
+    }
+
+    .disable-on-desktop {
+        display: none;
+    }
+    .disable-on-mobile {
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+      }
+    
+    .display-on-mobile {
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+    
+    .display-on-desktop {
+        display: block;
+    }
+    

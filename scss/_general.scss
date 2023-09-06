@@ -4,9 +4,9 @@ header {
   nav {
     background-color: transparent;
     .nav-link {
-      color: white;
+      color: $color-fuentes;
       &:hover {
-        color: rgba(255, 255, 255, 0.8);
+        color: $acento;
       }
     }
   }
@@ -25,3 +25,29 @@ header {
  border: 3px solid $primary-color !important;
  margin: 16px;
 }
+
+img {
+  filter: saturate(1.2);
+  &:hover {
+    filter: saturate(1);
+  }
+}
+
+.carousel {
+  height: 100%;
+}
+
+.accordion-button {
+  color: $color-fuentes; 
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $color-fondo-secundario;
+  color: $color-fuentes;
+}
+
+.accordion-button.collapsed {
+  background-color: $color-botones-secundarios;
+  color: $color-fuentes;
+}
+
